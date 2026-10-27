@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lola Casademunt — Black Wild Friday</title>
+  <meta name="description" content="Black Wild Friday: 30% OFF en productos seleccionados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Mr+Dafoe&family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Barra de anuncios -->
+    <div class="announce" id="announce">
+      <div class="announce__nav">
+        <button type="button" aria-label="Anterior" data-msg="-1"><img src="assets/icons/arrow-left.svg" alt="" /></button>
+        <button type="button" aria-label="Siguiente" data-msg="1"><img src="assets/icons/arrow-right.svg" alt="" /></button>
+      </div>
+      <p class="announce__text" id="announce-text" aria-live="polite">Hasta un 40% OFF para miembros Lola&amp;You</p>
+      <button type="button" class="announce__close" aria-label="Cerrar" id="announce-close"><img src="assets/icons/close.svg" alt="" /></button>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <video class="hero__video" src="assets/video/hero.mp4" autoplay muted loop playsinline></video>
+
+      <header class="header">
+        <button type="button" class="header__menu" aria-label="Menú" aria-expanded="false" aria-controls="menu" id="menu-toggle">
+          <img src="assets/icons/menu.svg" alt="" />
+        </button>
+        <img class="header__logo" src="assets/icons/animal-logo.svg" alt="Lola Casademunt" />
+        <div class="header__actions">
+          <button type="button" aria-label="Buscar"><img src="assets/icons/search.svg" alt="" /></button>
+          <button type="button" aria-label="Cuenta"><img src="assets/icons/account.svg" alt="" /></button>
+          <button type="button" aria-label="Bolsa" class="header__bag" id="bag">
+            <img src="assets/icons/bag.svg" alt="" />
+            <span class="header__badge" id="bag-count" hidden>0</span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="menu" id="menu" hidden>
+        <a href="#">Americanas</a>
+        <a href="#">Bolsos</a>
+        <a href="#">Jerséis</a>
+        <a href="#">Calzado</a>
+        <a href="#">Black Wild Friday</a>
+      </nav>
+
+      <h1 class="hero__title">
+        <span class="hero__serif">Black</span>
+        <span class="hero__script-wrap"><span class="hero__script">Wild</span></span>
+        <span class="hero__serif hero__serif--pad">Friday</span>
+      </h1>
+
+      <div class="hero__cta">
+        <p class="hero__offer">30% OFF SELECTED PRODUCTS</p>
+        <a href="#shop" class="hero__link">Descubre más</a>
+      </div>
+
+      <img class="hero__wordmark" src="assets/icons/wordmark-light.svg" alt="Lola Casademunt" />
+    </section>
+
+    <!-- Categorías -->
+    <section class="shop" id="shop">
+      <a href="#" class="card" data-label="americanas">
+        <div class="card__media"><img src="assets/img/americanas.png" alt="Americanas" class="card__img card__img--cover" /></div>
+        <div class="card__label">americanas <img src="assets/icons/arrow-right-dark.svg" alt="" /></div>
+      </a>
+      <a href="#" class="card" data-label="bolsos">
+        <div class="card__media"><img src="assets/img/bolsos.png" alt="Bolsos" class="card__img card__img--bolsos" /></div>
+        <div class="card__label">bolsos <img src="assets/icons/arrow-right-dark.svg" alt="" /></div>
+      </a>
+      <a href="#" class="card" data-label="jerséis">
+        <div class="card__media"><img src="assets/img/jerseis.png" alt="Jerséis" class="card__img card__img--bottom" /></div>
+        <div class="card__label">jerséis <img src="assets/icons/arrow-right-dark.svg" alt="" /></div>
+      </a>
+      <a href="#" class="card" data-label="calzado">
+        <div class="card__media"><img src="assets/img/calzado.png" alt="Calzado" class="card__img card__img--bottom" /></div>
+        <div class="card__label">calzado <img src="assets/icons/arrow-right-dark.svg" alt="" /></div>
+      </a>
+    </section>
+    <p class="selected" id="selected" hidden>Categoría seleccionada: <b id="selected-label"></b></p>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__row footer__perks">
+        <div><p class="footer__title">RECOGIDA EN TIENDA</p><p class="footer__muted">Madrid, Barcelona, Valencia, Málaga y más</p></div>
+        <div><p class="footer__title">DEVOLUCIONES EN 30 DÍAS</p><p class="footer__muted">Devoluciones fáciles online o en tienda física</p></div>
+        <div><p class="footer__title">PAGO SEGURO</p><p class="footer__muted">Paga en hasta 12 plazos con Klarna o Sequra</p></div>
+      </div>
+
+      <div class="footer__row newsletter">
+        <div class="newsletter__inner">
+          <div class="newsletter__copy">
+            <p class="newsletter__eyebrow">NEWSLETTER</p>
+            <p class="newsletter__headline">Consigue un 10% OFF en tu primer pedido y recibe actualizaciones exclusivas sobre en lanzamiento de colecciones</p>
+          </div>
+          <form class="newsletter__form" id="newsletter">
+            <input type="email" required placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" />
+            <button type="submit">Suscríbirse a la newsletter</button>
+          </form>
+          <p class="newsletter__thanks" id="newsletter-thanks" hidden>¡Gracias por suscribirte!</p>
+        </div>
+      </div>
+
+      <div class="footer__row footer__cols">
+        <div><p class="footer__title">LOLA CASADEMUNT</p><a href="#">Encuentra una tienda</a><a href="#">Desfiles</a><a href="#">Franquicias &amp; Multimarca</a><a href="#">Trabaja con nosotros</a><a href="#">LolaWorld</a></div>
+        <div><p class="footer__title">GUÍA DE COMPRA</p><a href="#">Guía de compra</a><a href="#">Mi cuenta</a><a href="#">Devoluciones</a><a href="#">FAQ</a></div>
+        <div><p class="footer__title">LEGAL</p><a href="#">Condiciones generales</a><a href="#">Política de privacidad</a><a href="#">Política de cookies</a><a href="#">Política de falsificaciones</a><a href="#">Código ético</a><a href="#">Bases legales Lola &amp; You</a></div>
+        <div><p class="footer__title">REDES SOCIALES</p><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">TikTok</a><a href="#">Pinterest</a></div>
+      </div>
+
+      <div class="footer__row footer__bottom">
+        <img class="footer__wordmark" src="assets/icons/wordmark-dark.svg" alt="Lola Casademunt" />
+        <div class="footer__legal">
+          <p>© Lola Casademunt 2026</p>
+          <p>País: <u>España (EUR)</u> &nbsp;|&nbsp; Idioma: <u>Español</u></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
